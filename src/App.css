@@ -1,0 +1,234 @@
+.app {
+  width: 100%;
+}
+
+h1 {
+  margin: 0 0 1.25rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: -0.03em;
+  color: var(--text);
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.25rem 1.35rem;
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.field {
+  display: grid;
+  grid-template-columns: 3.25rem auto 6.25rem;
+  align-items: center;
+  gap: 0.55rem 0.65rem;
+}
+
+.field__label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: right;
+  cursor: pointer;
+}
+
+.odds-prefix {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.odds-prefix--spacer {
+  visibility: hidden;
+  user-select: none;
+}
+
+.num-input {
+  width: 6.25rem;
+  padding: 0.5rem 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--box);
+  font: inherit;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+  text-align: right;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.num-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(240, 160, 64, 0.18);
+}
+
+.chance {
+  margin-top: 1.35rem;
+  padding-top: 1.15rem;
+  border-top: 1px solid var(--border);
+}
+
+.chance__label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text);
+  text-align: center;
+}
+
+.chance__pct {
+  width: 100%;
+  margin-bottom: 0.2rem;
+  text-align: center;
+  line-height: 1;
+}
+
+.chance__pct::after {
+  content: '%';
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  vertical-align: baseline;
+  pointer-events: none;
+}
+
+.chance__pct--editing::after {
+  display: none;
+}
+
+.chance__value {
+  display: inline-block;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  font: inherit;
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--accent);
+  line-height: 1;
+  text-align: center;
+  vertical-align: baseline;
+  field-sizing: content;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.chance__value:focus {
+  outline: none;
+  box-shadow: inset 0 -3px 0 rgba(240, 160, 64, 0.5);
+}
+
+.chance__value::-webkit-inner-spin-button,
+.chance__value::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.slider-wrap {
+  width: calc(100% + 1.5rem);
+  margin-left: -0.75rem;
+  padding: 4px 0 12px;
+}
+
+.slider {
+  display: block;
+  width: 100%;
+  height: 36px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.slider::-webkit-slider-runnable-track {
+  height: 6px;
+  border: none;
+  border-radius: 99px;
+  background: linear-gradient(
+    to right,
+    var(--accent) var(--fill),
+    var(--box) var(--fill)
+  );
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 28px;
+  height: 28px;
+  margin-top: -11px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 3px solid var(--card);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+  cursor: grab;
+}
+
+.slider::-webkit-slider-thumb:active {
+  cursor: grabbing;
+}
+
+.slider::-moz-range-track {
+  height: 6px;
+  border: none;
+  border-radius: 99px;
+  background: var(--box);
+}
+
+.slider::-moz-range-progress {
+  height: 6px;
+  border: none;
+  border-radius: 99px;
+  background: var(--accent);
+}
+
+.slider::-moz-range-thumb {
+  width: 28px;
+  height: 28px;
+  border: 3px solid var(--card);
+  border-radius: 50%;
+  background: var(--accent);
+  cursor: grab;
+}
+
+.dryness {
+  margin: 1rem 0 0;
+  padding: 0.85rem 0.75rem;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: rgba(240, 160, 64, 0.1);
+  border-radius: 10px;
+  line-height: 1.35;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
