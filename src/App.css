@@ -2,9 +2,77 @@
   width: 100%;
 }
 
+.header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+
+.layout {
+  display: grid;
+  gap: 1rem;
+  align-items: start;
+}
+
+.info-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.layout > *,
+.info-grid > * {
+  min-width: 0;
+}
+
+@media (min-width: 52rem) {
+  .layout {
+    grid-template-columns: 3fr 2fr;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.stats h2 {
+  margin: 0 0 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.stats__list {
+  margin: 0;
+}
+
+.stats__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.stats__row:last-child {
+  border-bottom: none;
+}
+
+.stats__row dt {
+  color: var(--muted);
+}
+
+.stats__row dd {
+  margin: 0;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
 h1 {
-  margin: 0 0 1.25rem;
-  font-size: 1.6rem;
+  margin: 0 0 0.35rem;
+  font-size: 2.25rem;
   font-weight: 700;
   text-align: center;
   letter-spacing: -0.03em;
@@ -103,7 +171,7 @@ h1 {
 
 .chance__pct::after {
   content: '%';
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: 700;
   color: var(--accent);
   vertical-align: baseline;
@@ -123,7 +191,7 @@ h1 {
   border-radius: 0;
   background: transparent;
   font: inherit;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: 700;
   font-variant-numeric: tabular-nums;
   color: var(--accent);
@@ -225,6 +293,58 @@ h1 {
   background: rgba(240, 160, 64, 0.1);
   border-radius: 10px;
   line-height: 1.35;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+
+.info {
+  padding: 1rem 1.25rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.info h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.info p {
+  margin: 0.5rem 0;
+}
+
+.info ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.info li {
+  margin-bottom: 0.35rem;
+}
+
+.formula {
+  display: block;
+  padding: 0.6rem 0.75rem;
+  background: var(--box);
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: var(--text);
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.footer {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--muted);
 }
 
 input[type='number']::-webkit-inner-spin-button,

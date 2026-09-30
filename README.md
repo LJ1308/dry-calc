@@ -1,22 +1,26 @@
 # OSRS Dry Calculator
 
-Simple dry streak calculator. Rate is always **1 in X**, one roll per kill.
+Calculates the chance of getting a drop in OSRS based on drop rate and kill count.
 
 ```
 chance = 1 - ((rate - 1) / rate) ^ kills
 ```
 
-## Dev
+## Run
 
 ```bash
 npm install
 npm run dev
 ```
 
-## GitHub Pages
+Or use **Run dev server** in the Run and Debug panel.
+
+## Deploy
 
 ```bash
 npm run deploy
 ```
 
-Then enable Pages from the `gh-pages` branch.
+Run this from `master`. It builds the site and pushes it to the `gh-pages` branch, which is what GitHub Pages serves. You never need to check out `gh-pages` yourself.
+
+First time only: in the repo's **Settings → Pages**, set the branch to `gh-pages`.
